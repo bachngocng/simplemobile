@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="mobile.js"></script>
+</head>
+<body>
+<script>
+    let mobileBach = new Mobile(1,[],[],[],true);
+    let mobileQuan = new Mobile(99,[],[],[],true);
+    if(mobileBach.checkStatus() === true) {
+        alert("điện thoại đang bật")
+    }
+    mobileBach.chargeBattery();
+    alert("Pin điện thoại của bạn: " +mobileBach.battery)
+    mobileBach.createMessages("Hello bro");
+    mobileBach.receiveMessages("Hello bach", mobileQuan)
+    mobileQuan.sentMessages("Hello",mobileBach);
+</script>
+
+</body>
+</html>
